@@ -26,7 +26,15 @@ function getwords($allwords, $numwords)
 	$words = array();
 	for ($i = 0; $i < count($keys); $i++)
 	{
-		$words[] = $allwords[$keys[$i]];
+		if (!ctype_alnum($allwords[$keys[$i]]))
+		{
+			// This recursion isn't ideal... it could potentially be crazy slow
+			$words[] = getwords($allwords, 1);
+		}
+		else
+		{
+			$words[] = $allwords[$keys[$i]];
+		}
 	}
 	return $words;
 }
