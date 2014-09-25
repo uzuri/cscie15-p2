@@ -2,9 +2,10 @@
 	include("settings.php");
 	include("header.inc");
 	include("functions.php");
-
-	getword();
 	
+	$allwords = loadwords();
+	$words = getword($allwords, $numwords);
+	echo $words;
 	
 ?>
 <h1><?php echo $sitetitle; ?></h1>

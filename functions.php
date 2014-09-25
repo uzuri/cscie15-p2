@@ -1,11 +1,13 @@
 <?php
 
-function getword()
+function getword($allwords, $numwords)
 {
-	//Open the dictionary file and stick it in array
-	$allwords = file("/usr/share/dict/words");
-	echo count($allwords);
+	return array_rand($allwords, $numwords);
 }
 
+function loadwords()
+{
+	return file("/usr/share/dict/words");
+}
 
 ?>
