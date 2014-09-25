@@ -5,7 +5,7 @@
 	
 	$allwords = loadwords();
 	$words = getword($allwords, $numwords);
-	echo $words;
+	print_r($words);
 	
 ?>
 <h1><?php echo $sitetitle; ?></h1>
