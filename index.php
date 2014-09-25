@@ -15,8 +15,8 @@
 <p class="pass"><strong>Your Password: </strong> <?php echo $pass; ?></p>
 <form method="post" action="index.php">
 <p><label for="words">Number of Words: </label><input name="words" type="number" value="4" min="1" max="20" /></p>
-<p><label for="inc_num">Include a number?</label><input name="inc_num" type="radio" value="1" /> Yes | <input name="inc_num" type="radio" value="0" /> No</p>
-<p><label for="inc_char">Include a special character (!,@,#,$,%, etc.)?</label><input name="inc_char" type="radio" value="1" /> Yes | <input name="inc_char" type="radio" value="0" /> No</p>
+<p><label for="inc_num">Include a number?</label><input name="inc_num" type="radio" value="1" /> Yes | <input name="inc_num" type="radio" value="0" selected="selected" /> No</p>
+<p><label for="inc_char">Include a special character (!,@,#,$,%, etc.)?</label><input name="inc_char" type="radio" value="1" /> Yes | <input name="inc_char" type="radio" value="0" selected="selected" /> No</p>
 
 <p><input type="submit" value="Give me another password" /></p>
 </form>
