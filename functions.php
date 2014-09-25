@@ -29,6 +29,7 @@ function getwords($allwords, $numwords)
 		if (strstr("'" , $allwords[$keys[$i]]))
 		{
 			// This recursion isn't ideal... it could potentially be crazy slow
+			echo "quote exists";
 			$words[] = getwords($allwords, 1);
 		}
 		else
