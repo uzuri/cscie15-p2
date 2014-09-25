@@ -3,6 +3,9 @@
 	include("header.inc");
 	include("functions.php");
 
+	getword();
+	
+	
 ?>
 <h1><?php echo $sitetitle; ?></h1>
 
