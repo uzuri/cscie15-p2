@@ -1,5 +1,6 @@
 <?php
 $sitetitle = "P2: XKCD Password Generator";
+echo $sitetitle;
 
 include("header.inc");
 include("functions.php");
