@@ -2,7 +2,7 @@
 
 function buildpass($words, $usenum, $usechar)
 {
-	$basepass = implode(" ", $words);
+	$basepass = strtolower(implode(" ", $words));
 	srand(time());
 	if ($usenum)
 	{
