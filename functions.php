@@ -6,18 +6,18 @@ function buildpass($words, $usenum, $usechar)
 	if ($usenum)
 	{
 		$num = rand(0, 9);
-		$basepass .= $num;
+		$words[] = $num;
 	}
 	if ($usechar)
 	{
 		// Leave out some special chars that have sites have given me trouble over in the past, like *
 		$chars = array("!", "@", "#", "$", "%", "^", "&", "(", ")", "?", "+", "-", "_", "=");
 		$char = rand(0, count($chars) - 1);
-		$basepass .= $chars[$char];
+		$words[] = $chars[$char];
 	}
 	
 	$basepass = trim(strtolower(implode(" ", $words)));
-	return trim($basepass);
+	return $basepass;
 }
 
 function getwords($allwords, $numwords)
