@@ -26,7 +26,7 @@ function getwords($allwords, $numwords)
 	$words = array();
 	for ($i = 0; $i < count($keys); $i++)
 	{
-		if (strstr("'" , $allwords[$keys[$i]]))
+		if (strstr($allwords[$keys[$i]]), "'")
 		{
 			// This recursion isn't ideal... it could potentially be crazy slow
 			echo "quote exists";
