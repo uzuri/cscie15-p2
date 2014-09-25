@@ -38,7 +38,6 @@ function getwords($allwords, $numwords)
 
 function loadwords()
 {
-	
 	return array_filter(file("/usr/share/dict/words"), "filterwords");
 }
 
