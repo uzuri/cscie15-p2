@@ -33,7 +33,8 @@ function getwords($allwords, $numwords)
 
 function loadwords()
 {
-	return file("/usr/share/dict/words");
+	
+	return array_filter(file("/usr/share/dict/words"), "ctype_alnum");
 }
 
 ?>
