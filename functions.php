@@ -27,19 +27,7 @@ function getwords($allwords, $numwords)
 	$words = array();
 	for ($i = 0; $i < count($keys); $i++)
 	{
-		if (strstr($allwords[$keys[$i]], "'"))
-		{
-			// This recursion isn't ideal... it could potentially be
-			// crazy slow but it does get rid of the apostrophe'd
-			// words which might not be allowable in some systems
-			$temp = getwords($allwords, 1);
-			print_r($temp);
-			$words[] = $temp[0];
-		}
-		else
-		{
-			$words[] = $allwords[$keys[$i]];
-		}
+		$words[] = $allwords[$keys[$i]];
 	}
 	return $words;
 }
