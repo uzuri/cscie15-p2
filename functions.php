@@ -9,7 +9,7 @@ function buildpass($words, $usenum, $usechar)
 		$num = rand(0, 9);
 		$basepass .= $num;
 	}
-	if ($userchar)
+	if ($usechar)
 	{
 		// Leave out some special chars that have sites have given me trouble over in the past, like *
 		$chars = array("!", "@", "#", "$", "%", "^", "&", "(", ")", "?", "+", "-", "_", "=");
