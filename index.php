@@ -4,15 +4,15 @@
 	include("functions.php");
 	
 	$allwords = loadwords();
-	$words = getword($allwords, $numwords);
-	print_r($words);
+	$words = getwords($allwords, $numwords);
+	$pass = buildpass($words, $usenum, $usechar);
 	
 ?>
 <h1><?php echo $sitetitle; ?></h1>
 
 <?php echo $error; ?>
 
-<p class="pass"><strong>Your Password: </strong></p>
+<p class="pass"><strong>Your Password: </strong> <?php echo $pass; ?></p>
 <form method="post" action="index.php">
 <p><label for="words">Number of Words: </label><input name="words" type="number" value="4" min="1" max="20" /></p>
 <p><label for="inc_num">Include a number?</label><input name="inc_num" type="radio" value="1" /> Yes | <input name="inc_num" type="radio" value="0" /> No</p>
