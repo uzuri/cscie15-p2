@@ -32,7 +32,9 @@ function getwords($allwords, $numwords)
 			// This recursion isn't ideal... it could potentially be
 			// crazy slow but it does get rid of the apostrophe'd
 			// words which might not be allowable in some systems
-			$words[] = getwords($allwords, 1)[0];
+			$temp = getwords($allwords, 1);
+			print_r($temp);
+			$words[] = $temp[0];
 		}
 		else
 		{
