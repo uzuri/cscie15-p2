@@ -20,11 +20,6 @@ function buildpass($words, $usenum, $usechar)
 	return $basepass;
 }
 
-function filterwords($var)
-{
-	return ctype_alnum($var);
-}
-
 function getwords($allwords, $numwords)
 {
 	$keys = array_rand($allwords, $numwords);
@@ -39,7 +34,7 @@ function getwords($allwords, $numwords)
 function loadwords()
 {
 	
-	return array_filter(file("/usr/share/dict/words"), "filterwords");
+	return file("/usr/share/dict/words");
 }
 
 ?>
