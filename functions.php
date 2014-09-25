@@ -10,7 +10,8 @@ function buildpass($words, $usenum, $usechar)
 	}
 	if ($usechar)
 	{
-		// Leave out some special chars that have sites have given me trouble over in the past, like *
+		// Leave out some special chars that have sites have given me
+		// trouble over in the past, like *
 		$chars = array("!", "@", "#", "$", "%", "^", "&", "(", ")", "?", "+", "-", "_", "=");
 		$char = rand(0, count($chars) - 1);
 		$words[] = $chars[$char];
@@ -28,8 +29,10 @@ function getwords($allwords, $numwords)
 	{
 		if (strstr($allwords[$keys[$i]], "'"))
 		{
-			// This recursion isn't ideal... it could potentially be crazy slow
-			$words[] = getwords($allwords, 1);
+			// This recursion isn't ideal... it could potentially be
+			// crazy slow but it does get rid of the apostrophe'd
+			// words which might not be allowable in some systems
+			$words[] = getwords($allwords, 1)[0];
 		}
 		else
 		{
