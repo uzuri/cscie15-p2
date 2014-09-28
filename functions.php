@@ -31,6 +31,7 @@ function getwords($allwords, $numwords)
 	}
 	if(preg_match('/[^a-z ]/i', $string))
 	{
+		echo "trying again";
 		return getwords($allwords, $numwords);
 	}
 	return $words;
