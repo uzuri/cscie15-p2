@@ -26,7 +26,7 @@
 
 <p><a href="http://xkcd.com/936/"><img src="http://imgs.xkcd.com/comics/password_strength.png" /></a></p>
 
-<p>This page generates XKCD-style passwords for you to use.  By default it will give you a four-word, all-lowercase passphrasephrase, but you can request different settings below.</p>
+<p>This page generates XKCD-style passwords for you to use.  By default it will give you a four-word, all-lowercase passphrasephrase, but you can request different settings above.</p>
 
 
 
