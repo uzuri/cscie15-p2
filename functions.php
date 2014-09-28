@@ -2,7 +2,7 @@
 
 function buildpass($words, $usenum, $usechar)
 {
-	srand(microtime());
+	srand(time());
 	if ($usenum)
 	{
 		$num = rand(0, 9);
