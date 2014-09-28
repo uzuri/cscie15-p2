@@ -23,14 +23,7 @@ function buildpass($words, $usenum, $usechar)
 
 function getwords($allwords, $numwords)
 {
-	// Because wordlist contains apostrophes, we can't just use array_rand
-	// the easy way
-	$keys = array();
-	for ($i = 0; $i < $numwords; $i++)
-	{
-		$keys[] = array_rand($allwords, 1);
-	}
-	
+	$keys = array_rand($allwords, $numwords);
 	$words = array();
 	for ($i = 0; $i < count($keys); $i++)
 	{
