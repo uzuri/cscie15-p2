@@ -3,14 +3,17 @@
 	include("header.inc");
 	include("functions.php");
 	
-	$allwords = loadwords();
-	$words = getwords($allwords, $numwords);
-	$pass = buildpass($words, $usenum, $usechar);
+	if ($err == "")
+	{
+		$allwords = loadwords();
+		$words = getwords($allwords, $numwords);
+		$pass = buildpass($words, $usenum, $usechar);
+	}
 	
 ?>
 <h1><?php echo $sitetitle; ?></h1>
 
-<?php echo $error; ?>
+<?php echo $err; ?>
 
 <p class="pass"><strong>Your Password: </strong> <?php echo $pass; ?></p>
 <form method="post" action="index.php">
