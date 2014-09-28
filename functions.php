@@ -28,7 +28,7 @@ function getwords($allwords, $numwords)
 	$keys = array();
 	for ($i = 0; $i < $numwords; $i++)
 	{
-		$keys[] = array_rand($allwords, $numwords);
+		$keys[] = array_rand($allwords, 1);
 	}
 	
 	$words = array();
