@@ -33,6 +33,7 @@ function getwords($allwords, $numwords)
 		while (!$success)
 		{
 			$temp = array_rand($allwords, 1);
+			echo $temp;
 			if (substr_count($temp, "'") == 0)
 			{
 				$success = true;
