@@ -35,7 +35,7 @@ function getwords($allwords, $numwords)
 	{
 		$key = array_rand($allwords, 1);
 		$word = $allwords[$key];
-		if (preg_match("/\W/", $word))
+		if (preg_match("/[^a-zA-Z]/", $word))
 		{
 			$words[] = $word;
 			$i++;
