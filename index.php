@@ -18,8 +18,8 @@
 <p class="pass"><strong>Your Password: </strong> <?php echo $pass; ?></p>
 <form method="post" action="index.php">
 <p><label for="words">Number of Words: </label><input id="words" name="words" type="number" value="<?php echo $numwords ?>" min="1" max="20" /></p>
-<p><label for="inc_num">Include a number?</label><input name="inc_num" id="inc_num" type="radio" value="1"<?php if ($usenum == 1) { echo 'checked="checked"'; } ?> Yes | <input name="inc_num" type="radio" value="0"<?php if ($usenum == 0) { echo 'checked="checked"';} ?> /> No</p>
-<p><label for="inc_char">Include a special character (!,@,#,$,%, etc.)?</label><input name="inc_char" id="inc_char" type="radio" value="1"<?php if ($usechar == 1) { echo 'checked="checked"';} ?> Yes | <input name="inc_char" type="radio" value="0"<?php if ($usechar == 0) { echo 'checked="checked"';} ?> No</p>
+<p><label for="inc_num">Include a number?</label><input name="inc_num" id="inc_num" type="radio" value="1"<?php if ($usenum == 1) { echo 'checked="checked"'; } ?> /> Yes | <input name="inc_num" type="radio" value="0"<?php if ($usenum == 0) { echo 'checked="checked"';} ?> /> No</p>
+<p><label for="inc_char">Include a special character (!,@,#,$,%, etc.)?</label><input name="inc_char" id="inc_char" type="radio" value="1"<?php if ($usechar == 1) { echo 'checked="checked"';} ?> /> Yes | <input name="inc_char" type="radio" value="0"<?php if ($usechar == 0) { echo 'checked="checked"';} ?> /> No</p>
 
 <p><input type="submit" value="Give me another password" /></p>
 </form>
