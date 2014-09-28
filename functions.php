@@ -23,16 +23,17 @@ function buildpass($words, $usenum, $usechar)
 
 function getwords($allwords, $numwords)
 {
-	$keys = array_rand($allwords, $numwords);
+	$i = 0;
 	$words = array();
-	for ($i = 0; $i < count($keys); $i++)
+	while ($i < $numwords)
 	{
-		$words[] = $allwords[$keys[$i]];
-	}
-	if(!preg_match('/[^a-z ]/', $string))
-	{
-		echo "trying again";
-		return getwords($allwords, $numwords);
+		$key = array_rand($allwords, 1);
+		$word = $allwords[$key];
+		if (preg_match('/^[a-z]/', $myString))
+		{
+			$words[] = $word;
+			$i++;
+		}
 	}
 	return $words;
 }
