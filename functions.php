@@ -2,7 +2,7 @@
 
 function buildpass($words, $usenum, $usechar)
 {
-	srand(time());
+	srand(microtime());
 	if ($usenum)
 	{
 		$num = rand(0, 9);
@@ -28,19 +28,7 @@ function getwords($allwords, $numwords)
 	$keys = array();
 	for ($i = 0; $i < $numwords; $i++)
 	{
-		// There's probably a faster way to do this, this'll do
-		$success = false;
-		while (!$success)
-		{
-			$temp = array_rand($allwords, 1);
-			echo $temp;
-			if (substr_count($temp, "'") == 0)
-			{
-				$success = true;
-			}
-				
-		}
-		$keys[] = $temp;
+		$keys[] = array_rand($allwords, $numwords);
 	}
 	
 	$words = array();
