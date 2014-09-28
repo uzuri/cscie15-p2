@@ -35,7 +35,6 @@ function getwords($allwords, $numwords)
 			$words[] = $word;
 			$i++;
 		}
-		$i++;
 	}
 	return $words;
 }
