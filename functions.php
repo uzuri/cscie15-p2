@@ -29,6 +29,10 @@ function getwords($allwords, $numwords)
 	{
 		$words[] = $allwords[$keys[$i]];
 	}
+	if(preg_match('/[^a-z ]/i', $string))
+	{
+		return getwords($allwords, $numwords);
+	}
 	return $words;
 }
 
